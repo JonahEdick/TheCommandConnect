@@ -1,10 +1,16 @@
-import { StyleSheet, Pressable, Text, Button, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import Colors from "../utilities/Color";
 
-export default function JoinButton(){
+export default function JoinButton({navigation}){
+    
+    function onPress(){
+        navigation.navigate('JoinGame');
+    }
+    
     return (
         <TouchableOpacity
             style={styles.button}
+            onPress={onPress}
         >
             <Text style={styles.text}>Join Game</Text>
         </TouchableOpacity>

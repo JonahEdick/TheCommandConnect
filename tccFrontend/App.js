@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import CreateGame from './pages/CreateGame';
+import JoinGame from './pages/JoinGame';
 import MainMenu from './pages/MainMenu';
 import Colors from './utilities/Color';
 
@@ -11,7 +12,11 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown:false}}>
+      <Stack.Navigator 
+        screenOptions={{
+          headerShown:false,
+          animation: 'none'
+          }}>
         <Stack.Screen
           name="MainMenu"
           component={MainMenu} 
@@ -19,7 +24,10 @@ export default function App() {
         <Stack.Screen
           name="CreateGame"
           component={CreateGame}
-          options={{title: 'Create Game'}}
+        />
+        <Stack.Screen
+          name="JoinGame"
+          component={JoinGame}
         />
       </Stack.Navigator>
     </NavigationContainer>

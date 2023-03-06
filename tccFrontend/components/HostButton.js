@@ -1,10 +1,10 @@
-import { StyleSheet, Pressable, Text, Button, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import Colors from "../utilities/Color";
 
 export default function HostButton({navigation}){
 
     function onPress(){
-        navigation.navigate('CreateGame')
+        navigation.navigate('CreateGame');
     }
 
     return (
